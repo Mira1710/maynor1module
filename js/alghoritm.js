@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const triangleVisualization = document.getElementById('triangleVisualization');
 
     checkButton.addEventListener('click', function() {
-        // Получаем значения сторон
+       
         const x = parseFloat(document.getElementById('sideX').value);
         const y = parseFloat(document.getElementById('sideY').value);
         const z = parseFloat(document.getElementById('sideZ').value);
 
-        // Проверяем, что все поля заполнены и значения положительные
+        
         if (isNaN(x) || isNaN(y) || isNaN(z) || x <= 0 || y <= 0 || z <= 0) {
             resultDiv.textContent = "Пожалуйста, введите положительные числа для всех сторон.";
             resultDiv.className = "result not-exists";
