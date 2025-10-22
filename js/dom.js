@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
         }
 
+<<<<<<< HEAD
         // Получить все элементы <p>
         const paragraphs = document.getElementsByTagName('p');
 
@@ -27,3 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 })
+=======
+        document.getElementById('lastname').textContent = document.getElementById('lastname').innerText;
+        document.getElementById('firstname').textContent = document.getElementById('firstname').innerText;
+        const birthDate = document.getElementById('birthdate').innerText;
+         // const year = birthDate.split('.')[2];
+        // document.getElementById('year').textContent = year;
+
+    })
+    })
+>>>>>>> d49e48be034dfe46d0f3855dfe0294c0b9a603d0

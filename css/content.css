@@ -280,6 +280,7 @@ button:hover {
 
 .dom-section{
     display: none;
+<<<<<<< HEAD
 }
 
 .lang-toggle{
@@ -293,4 +294,6 @@ button:hover {
 .screen img{
     width: 50%;
     height: auto;
+=======
+>>>>>>> d49e48be034dfe46d0f3855dfe0294c0b9a603d0
 }
