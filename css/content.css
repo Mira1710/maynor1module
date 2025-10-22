@@ -289,3 +289,8 @@ button:hover {
     font-size: 1vw;
     margin-top: 1.5vw;
 }
+
+.screen img{
+    width: 50%;
+    height: auto;
+}

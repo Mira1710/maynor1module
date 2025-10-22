@@ -10,23 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
         }
 
-        try {
-            const ps = document.getElementsByTagName('p');
-            const surname = ps[0].childNodes[1].innerText;
-            const name = ps[1].childNodes[1].innerText;
-            const year = ps[2].childNodes[1].innerText;
+        // Получить все элементы <p>
+        const paragraphs = document.getElementsByTagName('p');
 
-            // Теперь элемент output существует
-            document.getElementById('output').innerHTML =
-                `Фамилия: <strong>${surname}</strong><br>
-       Имя: <strong>${name}</strong><br>
-       Год рождения: <strong>${year}</strong>`;
+// Фамилия (первый <p>)
+        const surname = paragraphs[0].childNodes[1].innerText;
+        console.log('Фамилия:', surname);
 
-            console.log('Фамилия (через document.getElementsByTagName):', surname);
-            console.log('Имя:', name);
-            console.log('Год рождения:', year);
-        } catch(e) {
-            console.error("Ошибка:", e); // Всегда логируйте ошибки!
-        }
+// Имя (второй <p>)
+        const name = paragraphs[1].childNodes[1].innerText;
+        console.log('Имя:', name);
+
+// Год рождения (третий <p>)
+        const year = paragraphs[2].childNodes[1].innerText;
+        console.log('Год рождения:', year);
+
     })
-    })
+})
