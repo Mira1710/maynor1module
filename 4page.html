@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритмическая задача</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/alghoritm.js"></script>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
+            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
+            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
+            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="form-group">
+    <label for="sideX">Сторона X:</label>
+    <input type="number" id="sideX" step="any" min="0.1" placeholder="Введите длину стороны X">
+</div>
+
+<div class="form-group">
+    <label for="sideY">Сторона Y:</label>
+    <input type="number" id="sideY" step="any" min="0.1" placeholder="Введите длину стороны Y">
+</div>
+
+<div class="form-group">
+    <label for="sideZ">Сторона Z:</label>
+    <input type="number" id="sideZ" step="any" min="0.1" placeholder="Введите длину стороны Z">
+</div>
+
+<button id="checkButton">Проверить треугольник</button>
+
+<div id="result" class="result"></div>
+
+<div id="triangleVisualization" class="triangle-visualization">
+    <div class="triangle">
+        <div class="triangle-side" id="sideXLine"></div>
+        <div class="triangle-side" id="sideYLine"></div>
+        <div class="triangle-side" id="sideZLine"></div>
+
+        <div class="side-label" id="labelX"></div>
+        <div class="side-label" id="labelY"></div>
+        <div class="side-label" id="labelZ"></div>
+
+        <div class="right-angle" id="rightAngle"></div>
+    </div>
+</div>
+</body>
+</html>

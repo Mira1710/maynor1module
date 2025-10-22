@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/passport.js"></script>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
+            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
+            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
+            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
+        </ul>
+    </div>
+</nav>
+
+<button class="lang-toggle">EN</button>
+<button class="lang-toggle">Ru</button>
+<div class="passport-page">
+    <div class="passport-header">ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
+
+    <div class="passport-photo">ФОТОГРАФИЯ</div>
+
+    <div class="passport-data">
+        <div class="data-row">
+            <span class="data-label">Фамилия:</span>
+            <span id="lastname">Мусина</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Имя:</span>
+            <span id="firstname">Эльмира</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Отчество:</span>
+            <span id="middlename">Юнусовна</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Пол:</span>
+            <span>Женский</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Дата рождения:</span>
+            <span id="birthdate">17.10.2001</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Место рождения:</span>
+            <span>г. Москва</span>
+        </div>
+    </div>
+</div>
+<div class="passport-page">
+    <div class="passport-header">ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
+
+    <div class="passport-data">
+        <div class="data-row">
+            <span class="data-label">Код подразделения:</span>
+            <span>770-001</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Дата выдачи:</span>
+            <span>20.04.2016</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Орган, выдавший документ:</span>
+            <span>ОУФМС России по г. Москве</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Место жительства:</span>
+            <span>г. Москва, ул. Ленина, д. 15, кв. 34</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

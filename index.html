@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайны мира: Самые загадочные места планеты</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
+            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
+            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
+            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="hero">
+        <h1>Тайны мира: Самые загадочные места планеты</h1>
+        <p class="ph1">Исследуйте неразгаданные тайны и удивительные загадки нашей планеты</p>
+    </div>
+    <main>
+        <h2>Добро пожаловать в мир загадок!</h2>
+        <p>Наша планета полна мест, которые бросают вызов науке и нашему пониманию мира. От древних сооружений с неизвестным назначением до природных феноменов, которые невозможно объяснить - эти места продолжают интриговать исследователей и путешественников.</p>
+
+        <div class="internal-nav">
+            <a href="#top5">Топ-5 загадочных мест</a>
+            <a href="#theories">Теории и объяснения</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#top">К началу</a>
+        </div>
+        <h2 id="top5">Топ-5 самых загадочных мест мира</h2>
+
+        <ol>
+            <li>
+                <strong> 1 - Стоунхендж, Великобритания</strong>
+                <p>Древнее каменное сооружение, назначение которого до сих пор остается загадкой. Возраст - около 5000 лет.</p>
+            </li>
+            <li>
+                <strong> 2 - Линии Наски, Перу</strong>
+                <p>Гигантские геоглифы, которые можно увидеть только с воздуха. Созданы между 500 г. до н.э. и 500 г. н.э.</p>
+            </li>
+            <li>
+                <strong> 3 - Остров Пасхи, Чили</strong>
+                <p>Таинственные каменные статуи моаи, созданные древней цивилизацией Рапа-Нуи.</p>
+            </li>
+            <li>
+                <strong> 4 - Бермудский треугольник</strong>
+                <p>Область в Атлантическом океане, где бесследно исчезают корабли и самолеты.</p>
+            </li>
+            <li>
+                <strong> 5 - Пирамиды Гизы, Египет</strong>
+                <p>Древние сооружения с удивительной точностью построения, технологии создания которых до сих пор обсуждаются.</p>
+            </li>
+        </ol>
+        <h2 id="theories">Теории и объяснения</h2>
+
+        <div class="mystery-card">
+            <h3>Стоунхендж: Древняя обсерватория или нечто большее?</h3>
+            <p>Ученые предполагают, что Стоунхендж мог использоваться как древняя обсерватория для отслеживания движения солнца и луны. Однако точное назначение и методы строительства остаются предметом споров.</p>
+        </div>
+
+        <div class="mystery-card">
+            <h3>Линии Наски: Послание богам или инопланетянам?</h3>
+            <p>Гигантские рисунки, видимые только с воздуха, заставляют задуматься: для кого они были созданы? Некоторые теории предполагают связь с астрономическими явлениями, другие - ритуальное назначение.</p>
+        </div>
+        <h2 id="gallery">Галерея загадочных мест</h2>
+        <div class="image-gallery">
+            <img src="./img/Stonehenge.jpg" alt="Стоунхендж" class="thumbnail">
+            <img src="./img/linesNaki.jpg" alt="Линии Наски" class="thumbnail">
+            <img src="./img/pashi.jpg" alt="Остров Пасхи" class="thumbnail">
+            <img src="./img/giza-pyramids.jpg" alt="Пирамиды Гизы" class="thumbnail">
+        </div>
+
+        <div class="large-image-container" id="largeImageContainer">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Увеличенное изображение" class="large-image" id="largeImage">
+        </div>
+        <h2>Сравнение загадочных мест</h2>
+        <table>
+            <tr>
+                <th>Место</th>
+                <th>Страна</th>
+                <th>Возраст (лет)</th>
+                <th>Основная загадка</th>
+                <th>Изображение</th>
+            </tr>
+            <tr>
+                <td>Стоунхендж</td>
+                <td>Великобритания</td>
+                <td>5000</td>
+                <td>Назначение и метод строительства</td>
+                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD%D1%85%D0%B5%D0%BD%D0%B4%D0%B6" target="_blank">Подробнее</a>
+                    <img src="./img/Stonehenge.jpg" alt="Стоунхендж"></td>
+            </tr>
+            <tr>
+                <td>Линии Наски</td>
+                <td>Перу</td>
+                <td>2500</td>
+                <td>Цель создания гигантских геоглифов</td>
+                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BE%D0%B3%D0%BB%D0%B8%D1%84%D1%8B_%D0%9D%D0%B0%D1%81%D0%BA%D0%B8" target="_blank">Подробнее</a>
+                    <img src="./img/linesNaki.jpg" alt="Линии Наски"></td>
+            </tr>
+            <tr>
+                <td>Остров Пасхи</td>
+                <td>Чили</td>
+                <td>800</td>
+                <td>Перемещение гигантских статуй</td>
+                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9F%D0%B0%D1%81%D1%85%D0%B8" target="_blank">Подробнее</a>
+                    <img src="./img/pashi.jpg" alt="Остров Пасхи"></td>
+            </tr>
+            <tr>
+                <td>Пирамиды Гизы</td>
+                <td>Египет</td>
+                <td>4500</td>
+                <td>Технологии строительства</td>
+                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D1%8B_%D0%93%D0%B8%D0%B7%D1%8B" target="_blank">Подробнее</a>
+                    <img src="./img/giza-pyramids.jpg" alt="Остров Пасхи"></td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

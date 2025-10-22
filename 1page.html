@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форум</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script2.js"></script>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
+            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
+            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
+            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <main>
+        <h1>Контактные данные</h1>
+
+        <div class="internal-nav">
+            <a href="#form">Форма обратной связи</a>
+            <a href="#info">Контактная информация</a>
+            <a href="#top">К началу</a>
+        </div>
+
+        <h2 id="form">Форма для отправки контактных данных</h2>
+
+        <form action="https://httpbin.org/post" method="POST">
+            <div class="form-group">
+                <label for="lastname">Фамилия:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname">Имя:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Мобильный телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Дата отправки:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="group">Вопрос:</label>
+                <input type="text" id="group" name="group" required>
+            </div>
+
+            <button type="submit">Отправить данные</button>
+        </form>
+        <h2 id="form">Форма для отправки отзыва</h2>
+
+        <form action="https://httpbin.org/post" method="POST">
+            <input type="hidden" name="form_type" value="review">
+
+            <div class="form-group">
+                <label for="place_name">Название места:</label>
+                <input type="text" id="place_name" name="place_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="visit_date">Дата посещения:</label>
+                <input type="date" id="visit_date" name="visit_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Оценка (1-10):</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+            </div>
+
+            <div class="form-group">
+                <label>Уровень загадочности:</label>
+                <div>
+                    <input type="radio" id="mystery_low" name="mystery_level" value="low" required>
+                    <label for="mystery_low">Низкий</label>
+
+                    <input type="radio" id="mystery_medium" name="mystery_level" value="medium">
+                    <label for="mystery_medium">Средний</label>
+
+                    <input type="radio" id="mystery_high" name="mystery_level" value="high">
+                    <label for="mystery_high">Высокий</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Что вас впечатлило:</label>
+                <div>
+                    <input type="checkbox" id="impression_architecture" name="impressions" value="architecture">
+                    <label for="impression_architecture">Архитектура</label>
+
+                    <input type="checkbox" id="impression_history" name="impressions" value="history">
+                    <label for="impression_history">История</label>
+
+                    <input type="checkbox" id="impression_mystery" name="impressions" value="mystery">
+                    <label for="impression_mystery">Загадочность</label>
+
+                    <input type="checkbox" id="impression_atmosphere" name="impressions" value="atmosphere">
+                    <label for="impression_atmosphere">Атмосфера</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="review_text">Текст отзыва:</label>
+                <textarea id="review_text" name="review_text" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Отправить отзыв</button>
+        </form>
+
+        <h2 id="info">Контактная информация</h2>
+        <p>Если у вас есть вопросы или предложения, вы можете связаться с нами:</p>
+
+        <ul>
+            <li>Email: info@mysteries-world.ru</li>
+            <li>Телефон: +7 (495) 123-45-67</li>
+            <li>Адрес: г. Москва, ул. Таинственная, д. 13</li>
+        </ul>
+    </main>
+</body>
+</html>
