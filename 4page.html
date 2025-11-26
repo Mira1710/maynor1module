@@ -4,54 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алгоритмическая задача</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/alghoritm.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
-<nav>
+<!-- Навигация Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <ul>
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
-            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
-            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
-            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
-            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
-            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1page.html" class="nav-link"><i class="fas fa-images"></i> Форум</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.nationalgeographic.com" target="_blank" class="nav-link"><i class="fas fa-external-link-alt"></i> National Geographic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2page.html" class="nav-link"><i class="fas fa-address-book"></i> DOM_JS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3page.html" class="nav-link"><i class="fas fa-language"></i> Смена языка</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4page.html" class="nav-link active"><i class="fas fa-calculator"></i> Алгоритмы</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<div class="form-group">
-    <label for="sideX">Сторона X:</label>
-    <input type="number" id="sideX" step="any" min="0.1" placeholder="Введите длину стороны X">
-</div>
 
-<div class="form-group">
-    <label for="sideY">Сторона Y:</label>
-    <input type="number" id="sideY" step="any" min="0.1" placeholder="Введите длину стороны Y">
-</div>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <div class="card bg-dark border-light p-4 mb-4">
+                <h2 class="text-center mb-4">Проверка треугольника</h2>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="sideX" class="form-label">Сторона X:</label>
+                        <input type="number" class="form-control bg-dark text-white border-light" id="sideX" step="any" min="0.1" placeholder="Введите длину стороны X">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="sideY" class="form-label">Сторона Y:</label>
+                        <input type="number" class="form-control bg-dark text-white border-light" id="sideY" step="any" min="0.1" placeholder="Введите длину стороны Y">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="sideZ" class="form-label">Сторона Z:</label>
+                        <input type="number" class="form-control bg-dark text-white border-light" id="sideZ" step="any" min="0.1" placeholder="Введите длину стороны Z">
+                    </div>
+                </div>
 
-<div class="form-group">
-    <label for="sideZ">Сторона Z:</label>
-    <input type="number" id="sideZ" step="any" min="0.1" placeholder="Введите длину стороны Z">
-</div>
+                <div class="text-center">
+                    <button id="checkButton" class="btn btn-primary">Проверить треугольник</button>
+                </div>
 
-<button id="checkButton">Проверить треугольник</button>
+                <div id="result" class="result alert alert-info mt-4 text-center d-none"></div>
+            </div>
 
-<div id="result" class="result"></div>
+            <div id="triangleVisualization" class="triangle-visualization card bg-dark border-light p-4 text-center">
+                <h4 class="mb-3">Визуализация треугольника</h4>
+                <div class="triangle mx-auto">
+                    <div class="triangle-side" id="sideXLine"></div>
+                    <div class="triangle-side" id="sideYLine"></div>
+                    <div class="triangle-side" id="sideZLine"></div>
 
-<div id="triangleVisualization" class="triangle-visualization">
-    <div class="triangle">
-        <div class="triangle-side" id="sideXLine"></div>
-        <div class="triangle-side" id="sideYLine"></div>
-        <div class="triangle-side" id="sideZLine"></div>
+                    <div class="side-label" id="labelX"></div>
+                    <div class="side-label" id="labelY"></div>
+                    <div class="side-label" id="labelZ"></div>
 
-        <div class="side-label" id="labelX"></div>
-        <div class="side-label" id="labelY"></div>
-        <div class="side-label" id="labelZ"></div>
-
-        <div class="right-angle" id="rightAngle"></div>
+                    <div class="right-angle" id="rightAngle"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

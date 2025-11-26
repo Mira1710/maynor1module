@@ -4,126 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тайны мира: Самые загадочные места планеты</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/script.js"></script>
 </head>
 <body>
-<nav>
+<!-- Навигация Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <ul>
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
-            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
-            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
-            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
-            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
-            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1page.html" class="nav-link"><i class="fas fa-images"></i> Форум</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.nationalgeographic.com" target="_blank" class="nav-link"><i class="fas fa-external-link-alt"></i> National Geographic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2page.html" class="nav-link"><i class="fas fa-address-book"></i> DOM_JS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3page.html" class="nav-link"><i class="fas fa-language"></i> Смена языка</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4page.html" class="nav-link"><i class="fas fa-calculator"></i> Алгоритмы</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<div class="container">
-    <div class="hero">
-        <h1>Тайны мира: Самые загадочные места планеты</h1>
-        <p class="ph1">Исследуйте неразгаданные тайны и удивительные загадки нашей планеты</p>
+
+<div class="container mt-4">
+    <!-- Герой секция -->
+    <div class="hero text-center py-5">
+        <h1 class="display-4 fw-bold mb-3">Тайны мира: Самые загадочные места планеты</h1>
+        <p class="lead">Исследуйте неразгаданные тайны и удивительные загадки нашей планеты</p>
     </div>
-    <main>
-        <h2>Добро пожаловать в мир загадок!</h2>
-        <p>Наша планета полна мест, которые бросают вызов науке и нашему пониманию мира. От древних сооружений с неизвестным назначением до природных феноменов, которые невозможно объяснить - эти места продолжают интриговать исследователей и путешественников.</p>
 
-        <div class="internal-nav">
-            <a href="#top5">Топ-5 загадочных мест</a>
-            <a href="#theories">Теории и объяснения</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#top">К началу</a>
-        </div>
-        <h2 id="top5">Топ-5 самых загадочных мест мира</h2>
+    <main class="mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Добро пожаловать в мир загадок!</h2>
+                <p class="mb-4">Наша планета полна мест, которые бросают вызов науке и нашему пониманию мира. От древних сооружений с неизвестным назначением до природных феноменов, которые невозможно объяснить - эти места продолжают интриговать исследователей и путешественников.</p>
 
-        <ol>
-            <li>
-                <strong> 1 - Стоунхендж, Великобритания</strong>
-                <p>Древнее каменное сооружение, назначение которого до сих пор остается загадкой. Возраст - около 5000 лет.</p>
-            </li>
-            <li>
-                <strong> 2 - Линии Наски, Перу</strong>
-                <p>Гигантские геоглифы, которые можно увидеть только с воздуха. Созданы между 500 г. до н.э. и 500 г. н.э.</p>
-            </li>
-            <li>
-                <strong> 3 - Остров Пасхи, Чили</strong>
-                <p>Таинственные каменные статуи моаи, созданные древней цивилизацией Рапа-Нуи.</p>
-            </li>
-            <li>
-                <strong> 4 - Бермудский треугольник</strong>
-                <p>Область в Атлантическом океане, где бесследно исчезают корабли и самолеты.</p>
-            </li>
-            <li>
-                <strong> 5 - Пирамиды Гизы, Египет</strong>
-                <p>Древние сооружения с удивительной точностью построения, технологии создания которых до сих пор обсуждаются.</p>
-            </li>
-        </ol>
-        <h2 id="theories">Теории и объяснения</h2>
+                <!-- Внутренняя навигация -->
+                <div class="internal-nav d-flex flex-column flex-md-row gap-2 mb-5">
+                    <a href="#top5" class="btn btn-outline-light">Топ-5 загадочных мест</a>
+                    <a href="#theories" class="btn btn-outline-light">Теории и объяснения</a>
+                    <a href="#gallery" class="btn btn-outline-light">Галерея</a>
+                    <a href="#top" class="btn btn-outline-light">К началу</a>
+                </div>
 
-        <div class="mystery-card">
-            <h3>Стоунхендж: Древняя обсерватория или нечто большее?</h3>
-            <p>Ученые предполагают, что Стоунхендж мог использоваться как древняя обсерватория для отслеживания движения солнца и луны. Однако точное назначение и методы строительства остаются предметом споров.</p>
-        </div>
+                <!-- Топ-5 мест -->
+                <h2 id="top5" class="mt-5 mb-4">Топ-5 самых загадочных мест мира</h2>
+                <ol class="list-group list-group-numbered mb-5">
+                    <li class="list-group-item bg-transparent text-white border-light">
+                        <strong>Стоунхендж, Великобритания</strong>
+                        <p class="mb-0 mt-2">Древнее каменное сооружение, назначение которого до сих пор остается загадкой. Возраст - около 5000 лет.</p>
+                    </li>
+                    <li class="list-group-item bg-transparent text-white border-light">
+                        <strong>Линии Наски, Перу</strong>
+                        <p class="mb-0 mt-2">Гигантские геоглифы, которые можно увидеть только с воздуха. Созданы между 500 г. до н.э. и 500 г. н.э.</p>
+                    </li>
+                    <li class="list-group-item bg-transparent text-white border-light">
+                        <strong>Остров Пасхи, Чили</strong>
+                        <p class="mb-0 mt-2">Таинственные каменные статуи моаи, созданные древней цивилизацией Рапа-Нуи.</p>
+                    </li>
+                    <li class="list-group-item bg-transparent text-white border-light">
+                        <strong>Бермудский треугольник</strong>
+                        <p class="mb-0 mt-2">Область в Атлантическом океане, где бесследно исчезают корабли и самолеты.</p>
+                    </li>
+                    <li class="list-group-item bg-transparent text-white border-light">
+                        <strong>Пирамиды Гизы, Египет</strong>
+                        <p class="mb-0 mt-2">Древние сооружения с удивительной точностью построения, технологии создания которых до сих пор обсуждаются.</p>
+                    </li>
+                </ol>
 
-        <div class="mystery-card">
-            <h3>Линии Наски: Послание богам или инопланетянам?</h3>
-            <p>Гигантские рисунки, видимые только с воздуха, заставляют задуматься: для кого они были созданы? Некоторые теории предполагают связь с астрономическими явлениями, другие - ритуальное назначение.</p>
-        </div>
-        <h2 id="gallery">Галерея загадочных мест</h2>
-        <div class="image-gallery">
-            <img src="./img/Stonehenge.jpg" alt="Стоунхендж" class="thumbnail">
-            <img src="./img/linesNaki.jpg" alt="Линии Наски" class="thumbnail">
-            <img src="./img/pashi.jpg" alt="Остров Пасхи" class="thumbnail">
-            <img src="./img/giza-pyramids.jpg" alt="Пирамиды Гизы" class="thumbnail">
-        </div>
+    
+                <!-- Галерея -->
+                <h2 id="gallery" class="mt-5 mb-4">Галерея загадочных мест</h2>
+                <div class="row g-3 mb-5">
+                    <div class="col-6 col-md-3">
+                        <img src="./img/Stonehenge.jpg" alt="Стоунхендж" class="thumbnail img-fluid rounded">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="./img/linesNaki.jpg" alt="Линии Наски" class="thumbnail img-fluid rounded">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="./img/pashi.jpg" alt="Остров Пасхи" class="thumbnail img-fluid rounded">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="./img/giza-pyramids.jpg" alt="Пирамиды Гизы" class="thumbnail img-fluid rounded">
+                    </div>
+                </div>
 
-        <div class="large-image-container" id="largeImageContainer">
-            <span class="close-btn">&times;</span>
-            <img src="" alt="Увеличенное изображение" class="large-image" id="largeImage">
+                <!-- Модальное окно для изображений -->
+                <div class="modal fade" id="imageModal" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header border-light">
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="" alt="Увеличенное изображение" class="img-fluid" id="modalImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Таблица -->
+                <h2 class="mt-5 mb-4">Сравнение загадочных мест</h2>
+                <div class="table-responsive mb-5">
+                    <table class="table table-dark table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Страна</th>
+                                <th>Возраст (лет)</th>
+                                <th>Основная загадка</th>
+                                <th>Изображение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Стоунхендж</td>
+                                <td>Великобритания</td>
+                                <td>5000</td>
+                                <td>Назначение и метод строительства</td>
+                                <td>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD%D1%85%D0%B5%D0%BD%D0%B4%D0%B6" target="_blank" class="btn btn-sm btn-outline-light mb-2">Подробнее</a>
+                                    <img src="./img/Stonehenge.jpg" alt="Стоунхендж" class="img-fluid rounded">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Линии Наски</td>
+                                <td>Перу</td>
+                                <td>2500</td>
+                                <td>Цель создания гигантских геоглифов</td>
+                                <td>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BE%D0%B3%D0%BB%D0%B8%D1%84%D1%8B_%D0%9D%D0%B0%D1%81%D0%BA%D0%B8" target="_blank" class="btn btn-sm btn-outline-light mb-2">Подробнее</a>
+                                    <img src="./img/linesNaki.jpg" alt="Линии Наски" class="img-fluid rounded">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Остров Пасхи</td>
+                                <td>Чили</td>
+                                <td>800</td>
+                                <td>Перемещение гигантских статуй</td>
+                                <td>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9F%D0%B0%D1%81%D1%85%D0%B8" target="_blank" class="btn btn-sm btn-outline-light mb-2">Подробнее</a>
+                                    <img src="./img/pashi.jpg" alt="Остров Пасхи" class="img-fluid rounded">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Пирамиды Гизы</td>
+                                <td>Египет</td>
+                                <td>4500</td>
+                                <td>Технологии строительства</td>
+                                <td>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D1%8B_%D0%93%D0%B8%D0%B7%D1%8B" target="_blank" class="btn btn-sm btn-outline-light mb-2">Подробнее</a>
+                                    <img src="./img/giza-pyramids.jpg" alt="Пирамиды Гизы" class="img-fluid rounded">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <h2>Сравнение загадочных мест</h2>
-        <table>
-            <tr>
-                <th>Место</th>
-                <th>Страна</th>
-                <th>Возраст (лет)</th>
-                <th>Основная загадка</th>
-                <th>Изображение</th>
-            </tr>
-            <tr>
-                <td>Стоунхендж</td>
-                <td>Великобритания</td>
-                <td>5000</td>
-                <td>Назначение и метод строительства</td>
-                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD%D1%85%D0%B5%D0%BD%D0%B4%D0%B6" target="_blank">Подробнее</a>
-                    <img src="./img/Stonehenge.jpg" alt="Стоунхендж"></td>
-            </tr>
-            <tr>
-                <td>Линии Наски</td>
-                <td>Перу</td>
-                <td>2500</td>
-                <td>Цель создания гигантских геоглифов</td>
-                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BE%D0%B3%D0%BB%D0%B8%D1%84%D1%8B_%D0%9D%D0%B0%D1%81%D0%BA%D0%B8" target="_blank">Подробнее</a>
-                    <img src="./img/linesNaki.jpg" alt="Линии Наски"></td>
-            </tr>
-            <tr>
-                <td>Остров Пасхи</td>
-                <td>Чили</td>
-                <td>800</td>
-                <td>Перемещение гигантских статуй</td>
-                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9F%D0%B0%D1%81%D1%85%D0%B8" target="_blank">Подробнее</a>
-                    <img src="./img/pashi.jpg" alt="Остров Пасхи"></td>
-            </tr>
-            <tr>
-                <td>Пирамиды Гизы</td>
-                <td>Египет</td>
-                <td>4500</td>
-                <td>Технологии строительства</td>
-                <td class="giza"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D1%8B_%D0%93%D0%B8%D0%B7%D1%8B" target="_blank">Подробнее</a>
-                    <img src="./img/giza-pyramids.jpg" alt="Остров Пасхи"></td>
-            </tr>
-        </table>
     </main>
+</div>
+
+<section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Памятники искусства мира</h1>
+            <p class="lead mb-4">Откройте для себя величайшие произведения искусства и архитектуры со всего мира</p>
+        </div>
+    </section>
+
+    <!-- Секция с памятниками -->
+    <section id="monuments" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title d-inline-block">Великие памятники искусства</h2>
+                    <p class="text-muted">Исследуйте культурное наследие человечества через эти удивительные произведения</p>
+                </div>
+            </div>
+            
+            <!-- Фильтры -->
+            <div class="row mb-4">
+                <div class="col-12 text-center filter-buttons">
+                    <button class="btn btn-outline-primary btn-filter active" data-filter="all">Все</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="architecture">Архитектура</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="sculpture">Скульптура</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="painting">Живопись</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="ancient">Древние</button>
+                </div>
+            </div>
+            
+            <div class="row" id="monumentsContainer">
+    
+            </div>
+        </div>
+    </section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

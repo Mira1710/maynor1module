@@ -3,83 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM_JS. Считываем информацию из DOM</title>
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/passport.js"></script>
-    <title>Изменяем кириллицу на латиницу по клику</title>
-    <link rel="stylesheet" href="./css/style.css">
     <script src="js/script.js"></script>
 </head>
 <body>
-<nav>
+<!-- Навигация Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <ul>
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
-            <li><a href="1page.html"><i class="fas fa-images"></i> Форум </a></li>
-            <li><a href="https://www.nationalgeographic.com" target="_blank"><i class="fas fa-external-link-alt"></i> National Geographic</a></li>
-            <li><a href="2page.html"><i class="fas fa-address-book"></i> DOM_JS. Считываем информацию из DOM</a></li>
-            <li><a href="3page.html"><i class="fas fa-language"></i> Изменяем кириллицу на латиницу по клику</a></li>
-            <li><a href="4page.html"><i class="fas fa-calculator"></i> Алгоритмическая задача</a></li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1page.html" class="nav-link"><i class="fas fa-images"></i> Форум</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.nationalgeographic.com" target="_blank" class="nav-link"><i class="fas fa-external-link-alt"></i> National Geographic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2page.html" class="nav-link"><i class="fas fa-address-book"></i> DOM_JS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3page.html" class="nav-link active"><i class="fas fa-language"></i> Смена языка</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4page.html" class="nav-link"><i class="fas fa-calculator"></i> Алгоритмы</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<button id="languageToggle">EN</button>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <!-- Кнопка переключения языка -->
+            <div class="text-center mb-4">
+                <button id="languageToggle" class="btn btn-outline-light lang-toggle">EN</button>
+            </div>
 
-<div class="passport-page">
-    <div class="passport-header">ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
+            <!-- Первая страница паспорта -->
+            <div class="passport-page card bg-dark border-light mb-4">
+                <div class="card-header passport-header text-center fw-bold border-light">
+                    ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="passport-data">
+                                <div class="data-row d-flex mb-2">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Фамилия:</span>
+                                    <span id="lastname">Мусина</span>
+                                </div>
+                                <div class="data-row d-flex mb-2">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Имя:</span>
+                                    <span id="firstname">Эльмира</span>
+                                </div>
+                                <div class="data-row d-flex mb-2">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Отчество:</span>
+                                    <span id="middlename">Юнусовна</span>
+                                </div>
+                                <div class="data-row d-flex mb-2">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Пол:</span>
+                                    <span>Женский</span>
+                                </div>
+                                <div class="data-row d-flex mb-2">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Дата рождения:</span>
+                                    <span id="birthdate">17.10.2001</span>
+                                </div>
+                                <div class="data-row d-flex">
+                                    <span class="data-label fw-bold me-3" style="width: 120px;">Место рождения:</span>
+                                    <span>г. Москва</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="passport-photo border p-3 mb-3">
+                                ФОТОГРАФИЯ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="passport-photo">ФОТОГРАФИЯ</div>
-
-    <div class="passport-data">
-        <div class="data-row">
-            <span class="data-label">Фамилия:</span>
-            <span id="lastname">Мусина</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Имя:</span>
-            <span id="firstname">Эльмира</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Отчество:</span>
-            <span id="middlename">Юнусовна</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Пол:</span>
-            <span>Женский</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Дата рождения:</span>
-            <span id="birthdate">17.10.2001</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Место рождения:</span>
-            <span>г. Москва</span>
+            <!-- Вторая страница паспорта -->
+            <div class="passport-page card bg-dark border-light">
+                <div class="card-header passport-header text-center fw-bold border-light">
+                    ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ
+                </div>
+                <div class="card-body">
+                    <div class="passport-data">
+                        <div class="data-row d-flex mb-2">
+                            <span class="data-label fw-bold me-3" style="width: 160px;">Код подразделения:</span>
+                            <span>770-001</span>
+                        </div>
+                        <div class="data-row d-flex mb-2">
+                            <span class="data-label fw-bold me-3" style="width: 160px;">Дата выдачи:</span>
+                            <span>20.04.2016</span>
+                        </div>
+                        <div class="data-row d-flex mb-2">
+                            <span class="data-label fw-bold me-3" style="width: 160px;">Орган, выдавший документ:</span>
+                            <span>ОУФМС России по г. Москве</span>
+                        </div>
+                        <div class="data-row d-flex">
+                            <span class="data-label fw-bold me-3" style="width: 160px;">Место жительства:</span>
+                            <span>г. Москва, ул. Ленина, д. 15, кв. 34</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<div class="passport-page">
-    <div class="passport-header">ПАСПОРТ РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
 
-    <div class="passport-data">
-        <div class="data-row">
-            <span class="data-label">Код подразделения:</span>
-            <span>770-001</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Дата выдачи:</span>
-            <span>20.04.2016</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Орган, выдавший документ:</span>
-            <span>ОУФМС России по г. Москве</span>
-        </div>
-        <div class="data-row">
-            <span class="data-label">Место жительства:</span>
-            <span>г. Москва, ул. Ленина, д. 15, кв. 34</span>
-        </div>
-    </div>
-</div>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
